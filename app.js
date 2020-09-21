@@ -20,6 +20,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
+mongoose.connect("mongodb+srv://admin-aman:test123@cluster0.md1hx.mongodb.net/tododb", {useNewUrlParser: true, useUnifiedTopology: true,  useFindAndModify: false});
+
 const itemsSchema ={
   name:String
 };
