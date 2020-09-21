@@ -1,18 +1,25 @@
 //jshint esversion:6
 
 const express = require("express");
+
 const bodyParser = require("body-parser");
+
 const mongoose=require("mongoose");
-const _ =require("lodash");
+
+const _ =require("lodash")
+;
 const date = require(__dirname + "/date.js");
+
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
+
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(express.static("public"));
-mongoose.connect("mongodb+srv://admin-aman:test123@cluster0.md1hx.mongodb.net/tododb", {useNewUrlParser: true, useUnifiedTopology: true,  useFindAndModify: false});
+
 const itemsSchema ={
   name:String
 };
